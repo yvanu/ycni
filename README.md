@@ -1,8 +1,11 @@
 # ycni
 cni开发心得
 1. plugin
+
 ● plugin由kubelet调用，用于给pod创建veth-pair，分配ip等。
+
 ● 本项目采用开源ipam插件进行ip管理。
+
 ● plugin需实现如下函数：
 func cmdAdd(args *skel.CmdArgs) error {}
 func cmdDel(args *skel.CmdArgs) error {}
